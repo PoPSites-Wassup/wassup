@@ -19,7 +19,47 @@
     "prefer-stable": true,
     "require": {
         "php": "~7.4",
-        "pop-sites-wassup/custompost-mutations": "dev-master"
+        "getpop/api-rest": "dev-master",
+        "getpop/engine-wp-bootloader": "dev-master",
+        "getpop/function-fields": "dev-master",
+        "getpop/trace-tools": "dev-master",
+
+        "getpop/site-wp": "dev-master",
+        "getpop/spa": "dev-master",
+
+        "graphql-by-pop/graphql-server": "dev-master",
+        "leoloso/examples-for-pop": "dev-master",
+        "pop-schema/block-metadata-for-wp": "dev-master",
+        "pop-schema/cdn-directive": "dev-master",
+        "pop-schema/commentmeta-wp": "dev-master",
+        "pop-schema/convert-case-directives": "dev-master",
+        "pop-schema/custompostmedia-wp": "dev-master",
+        "pop-schema/custompostmeta-wp": "dev-master",
+        "pop-schema/google-translate-directive-for-customposts": "dev-master",
+        "pop-schema/pages-wp": "dev-master",
+        "pop-schema/post-tags-wp": "dev-master",
+        "pop-schema/posts-wp": "dev-master",
+        "pop-schema/taxonomyquery-wp": "dev-master",
+        "pop-schema/user-roles-acl": "dev-master",
+        "pop-schema/user-roles-wp": "dev-master",
+        "pop-schema/user-state-wp": "dev-master",
+        "pop-schema/usermeta-wp": "dev-master",
+        "pop-schema/post-mutations": "dev-master",
+        "pop-schema/custompostmedia-mutations-wp": "dev-master",
+        "pop-schema/comment-mutations-wp": "dev-master",
+
+        "pop-schema/categories-wp": "dev-master",
+        "pop-schema/notifications-wp": "dev-master",
+        "pop-schema/menus-wp": "dev-master",
+        "pop-schema/event-mutations-wp-em": "dev-master",
+        "pop-schema/everythingelse-wp": "dev-master",
+        "pop-schema/highlights-wp": "dev-master",
+        "pop-schema/locationposts-wp": "dev-master",
+        "pop-schema/stances-wp": "dev-master",
+
+        "pop-sites-wassup/post-mutations": "dev-master",
+        "pop-sites-wassup/highlight-mutations": "dev-master",
+        "pop-sites-wassup/stance-mutations": "dev-master"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
