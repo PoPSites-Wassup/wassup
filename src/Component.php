@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PoPSitesWassup\Wassup;
 
 use PoP\Root\Component\AbstractComponent;
+use PoPSitesWassup\Wassup\Config\ServiceConfiguration;
 
 /**
  * Initialize component
@@ -21,5 +22,20 @@ class Component extends AbstractComponent
         return [
             \PoPSitesWassup\CustomPostMutations\Component::class,
         ];
+    }
+
+    /**
+     * Initialize services
+     *
+     * @param array<string, mixed> $configuration
+     * @param string[] $skipSchemaComponentClasses
+     */
+    protected static function doInitialize(
+        array $configuration = [],
+        bool $skipSchema = false,
+        array $skipSchemaComponentClasses = []
+    ): void {
+        parent::doInitialize($configuration, $skipSchema, $skipSchemaComponentClasses);
+        ServiceConfiguration::initialize();
     }
 }
