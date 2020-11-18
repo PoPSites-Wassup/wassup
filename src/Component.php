@@ -62,6 +62,7 @@ class Component extends AbstractComponent
             \PoPSitesWassup\StanceMutations\Component::class,
             \PoPSitesWassup\CommentMutations\Component::class,
             \PoPSitesWassup\SystemMutations\Component::class,
+            \PoPSitesWassup\GravityFormsMutations\Component::class,
         ];
     }
 

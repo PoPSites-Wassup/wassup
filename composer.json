@@ -61,7 +61,8 @@
         "pop-sites-wassup/highlight-mutations": "dev-master",
         "pop-sites-wassup/stance-mutations": "dev-master",
         "pop-sites-wassup/comment-mutations": "dev-master",
-        "pop-sites-wassup/system-mutations": "dev-master"
+        "pop-sites-wassup/system-mutations": "dev-master",
+        "pop-sites-wassup/gravityforms-mutations": "dev-master"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
