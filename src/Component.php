@@ -75,6 +75,9 @@ class Component extends AbstractComponent
             \PoPSitesWassup\FlagMutations\Component::class,
             \PoPSitesWassup\ShareMutations\Component::class,
             \PoPSitesWassup\VolunteerMutations\Component::class,
+            \PoPSitesWassup\EventMutations\Component::class,
+            \PoPSitesWassup\LocationMutations\Component::class,
+            \PoPSitesWassup\LocationPostMutations\Component::class,
         ];
     }
 
