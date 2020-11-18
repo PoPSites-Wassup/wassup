@@ -73,7 +73,8 @@
         "pop-sites-wassup/location-mutations": "dev-master",
         "pop-sites-wassup/locationpost-mutations": "dev-master",
         "pop-sites-wassup/postlink-mutations": "dev-master",
-        "pop-sites-wassup/eventlink-mutations": "dev-master"
+        "pop-sites-wassup/eventlink-mutations": "dev-master",
+        "pop-sites-wassup/locationpostlink-mutations": "dev-master"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
