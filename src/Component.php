@@ -6,12 +6,16 @@ namespace PoPSitesWassup\Wassup;
 
 use PoP\Root\Component\AbstractComponent;
 use PoPSitesWassup\Wassup\Config\ServiceConfiguration;
+use PoP\Root\Component\YAMLServicesTrait;
+use PoP\ComponentModel\Container\ContainerBuilderUtils;
 
 /**
  * Initialize component
  */
 class Component extends AbstractComponent
 {
+    use YAMLServicesTrait;
+
     /**
      * Classes from PoP components that must be initialized before this component
      *
@@ -85,5 +89,18 @@ class Component extends AbstractComponent
     ): void {
         parent::doInitialize($configuration, $skipSchema, $skipSchemaComponentClasses);
         ServiceConfiguration::initialize();
+    }
+
+    /**
+     * Boot component
+     *
+     * @return void
+     */
+    public static function beforeBoot(): void
+    {
+        parent::beforeBoot();
+
+        // Initialize classes
+        ContainerBuilderUtils::instantiateNamespaceServices(__NAMESPACE__ . '\\Hooks');
     }
 }
