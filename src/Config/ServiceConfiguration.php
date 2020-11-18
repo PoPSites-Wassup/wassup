@@ -7,6 +7,14 @@ namespace PoPSitesWassup\Wassup\Config;
 use PoP\Root\Component\PHPServiceConfigurationTrait;
 use PoP\ComponentModel\Container\ContainerBuilderUtils;
 use PoP\ComponentModel\Instances\InstanceManagerInterface;
+use PoPSitesWassup\ContactUsMutations\MutationResolverBridges\ContactUsComponentMutationResolverBridge;
+use PoPSitesWassup\ContactUserMutations\MutationResolverBridges\ContactUserComponentMutationResolverBridge;
+use PoPSitesWassup\FlagMutations\MutationResolverBridges\FlagCustomPostComponentMutationResolverBridge;
+use PoPSitesWassup\ShareMutations\MutationResolverBridges\ShareComponentMutationResolverBridge;
+use PoPSitesWassup\VolunteerMutations\MutationResolverBridges\VolunteerComponentMutationResolverBridge;
+use PoPSitesWassup\NewsletterMutations\MutationResolverBridges\NewsletterSubscriptionComponentMutationResolverBridge;
+use PoPSitesWassup\NewsletterMutations\MutationResolverBridges\NewsletterUnsubscriptionComponentMutationResolverBridge;
+use PoPSitesWassup\GravityFormsMutations\MutationResolverBridges\GravityFormsComponentMutationResolverBridge;
 
 class ServiceConfiguration
 {
@@ -17,8 +25,57 @@ class ServiceConfiguration
         ContainerBuilderUtils::injectValuesIntoService(
             InstanceManagerInterface::class,
             'overrideClass',
-            \PoPSitesWassup\StanceMutations\MutationResolvers\CreateOrUpdateStanceMutationResolver::class,
-            \PoPSitesWassup\Wassup\MutationResolvers\CreateOrUpdateStanceMutationResolver::class
+            ContactUsComponentMutationResolverBridge::class,
+            GravityFormsComponentMutationResolverBridge::class
+        );
+
+        ContainerBuilderUtils::injectValuesIntoService(
+            InstanceManagerInterface::class,
+            'overrideClass',
+            ContactUsComponentMutationResolverBridge::class,
+            GravityFormsComponentMutationResolverBridge::class
+        );
+
+        ContainerBuilderUtils::injectValuesIntoService(
+            InstanceManagerInterface::class,
+            'overrideClass',
+            ContactUserComponentMutationResolverBridge::class,
+            GravityFormsComponentMutationResolverBridge::class
+        );
+
+        ContainerBuilderUtils::injectValuesIntoService(
+            InstanceManagerInterface::class,
+            'overrideClass',
+            FlagCustomPostComponentMutationResolverBridge::class,
+            GravityFormsComponentMutationResolverBridge::class
+        );
+
+        ContainerBuilderUtils::injectValuesIntoService(
+            InstanceManagerInterface::class,
+            'overrideClass',
+            VolunteerComponentMutationResolverBridge::class,
+            GravityFormsComponentMutationResolverBridge::class
+        );
+
+        ContainerBuilderUtils::injectValuesIntoService(
+            InstanceManagerInterface::class,
+            'overrideClass',
+            ShareComponentMutationResolverBridge::class,
+            GravityFormsComponentMutationResolverBridge::class
+        );
+
+        ContainerBuilderUtils::injectValuesIntoService(
+            InstanceManagerInterface::class,
+            'overrideClass',
+            NewsletterSubscriptionComponentMutationResolverBridge::class,
+            GravityFormsComponentMutationResolverBridge::class
+        );
+
+        ContainerBuilderUtils::injectValuesIntoService(
+            InstanceManagerInterface::class,
+            'overrideClass',
+            \GD_GF_DataLoad_ActionExecuter_NewsletterUnsubscription::class, //NewsletterUnsubscriptionComponentMutationResolverBridge::class,
+            GravityFormsComponentMutationResolverBridge::class
         );
     }
 }
