@@ -63,6 +63,12 @@ class Component extends AbstractComponent
             \PoPSitesWassup\CommentMutations\Component::class,
             \PoPSitesWassup\SystemMutations\Component::class,
             \PoPSitesWassup\GravityFormsMutations\Component::class,
+            \PoPSitesWassup\ContactUsMutations\Component::class,
+            \PoPSitesWassup\ContactUserMutations\Component::class,
+            \PoPSitesWassup\NewsletterMutations\Component::class,
+            \PoPSitesWassup\FlagMutations\Component::class,
+            \PoPSitesWassup\ShareMutations\Component::class,
+            \PoPSitesWassup\VolunteerMutations\Component::class,
         ];
     }
 

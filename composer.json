@@ -62,7 +62,13 @@
         "pop-sites-wassup/stance-mutations": "dev-master",
         "pop-sites-wassup/comment-mutations": "dev-master",
         "pop-sites-wassup/system-mutations": "dev-master",
-        "pop-sites-wassup/gravityforms-mutations": "dev-master"
+        "pop-sites-wassup/gravityforms-mutations": "dev-master",
+        "pop-sites-wassup/contactus-mutations": "dev-master",
+        "pop-sites-wassup/contactuser-mutations": "dev-master",
+        "pop-sites-wassup/newsletter-mutations": "dev-master",
+        "pop-sites-wassup/flag-mutations": "dev-master",
+        "pop-sites-wassup/share-mutations": "dev-master",
+        "pop-sites-wassup/volunteer-mutations": "dev-master"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
