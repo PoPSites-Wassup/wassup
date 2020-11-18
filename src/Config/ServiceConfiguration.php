@@ -14,7 +14,7 @@ use PoPSitesWassup\ShareMutations\MutationResolverBridges\ShareComponentMutation
 use PoPSitesWassup\VolunteerMutations\MutationResolverBridges\VolunteerComponentMutationResolverBridge;
 use PoPSitesWassup\NewsletterMutations\MutationResolverBridges\NewsletterSubscriptionComponentMutationResolverBridge;
 use PoPSitesWassup\NewsletterMutations\MutationResolverBridges\NewsletterUnsubscriptionComponentMutationResolverBridge;
-use PoPSitesWassup\GravityFormsMutations\MutationResolverBridges\GravityFormsComponentMutationResolverBridge;
+use PoPSitesWassup\GravityFormsMutations\MutationResolverBridges\GravityFormsAddEntryToFormMutationResolverBridge;
 
 class ServiceConfiguration
 {
@@ -26,56 +26,56 @@ class ServiceConfiguration
             InstanceManagerInterface::class,
             'overrideClass',
             ContactUsComponentMutationResolverBridge::class,
-            GravityFormsComponentMutationResolverBridge::class
+            GravityFormsAddEntryToFormMutationResolverBridge::class
         );
 
         ContainerBuilderUtils::injectValuesIntoService(
             InstanceManagerInterface::class,
             'overrideClass',
             ContactUsComponentMutationResolverBridge::class,
-            GravityFormsComponentMutationResolverBridge::class
+            GravityFormsAddEntryToFormMutationResolverBridge::class
         );
 
         ContainerBuilderUtils::injectValuesIntoService(
             InstanceManagerInterface::class,
             'overrideClass',
             ContactUserComponentMutationResolverBridge::class,
-            GravityFormsComponentMutationResolverBridge::class
+            GravityFormsAddEntryToFormMutationResolverBridge::class
         );
 
         ContainerBuilderUtils::injectValuesIntoService(
             InstanceManagerInterface::class,
             'overrideClass',
             FlagCustomPostComponentMutationResolverBridge::class,
-            GravityFormsComponentMutationResolverBridge::class
+            GravityFormsAddEntryToFormMutationResolverBridge::class
         );
 
         ContainerBuilderUtils::injectValuesIntoService(
             InstanceManagerInterface::class,
             'overrideClass',
             VolunteerComponentMutationResolverBridge::class,
-            GravityFormsComponentMutationResolverBridge::class
+            GravityFormsAddEntryToFormMutationResolverBridge::class
         );
 
         ContainerBuilderUtils::injectValuesIntoService(
             InstanceManagerInterface::class,
             'overrideClass',
             ShareComponentMutationResolverBridge::class,
-            GravityFormsComponentMutationResolverBridge::class
+            GravityFormsAddEntryToFormMutationResolverBridge::class
         );
 
         ContainerBuilderUtils::injectValuesIntoService(
             InstanceManagerInterface::class,
             'overrideClass',
             NewsletterSubscriptionComponentMutationResolverBridge::class,
-            GravityFormsComponentMutationResolverBridge::class
+            GravityFormsAddEntryToFormMutationResolverBridge::class
         );
 
         ContainerBuilderUtils::injectValuesIntoService(
             InstanceManagerInterface::class,
             'overrideClass',
             \GD_GF_DataLoad_ActionExecuter_NewsletterUnsubscription::class, //NewsletterUnsubscriptionComponentMutationResolverBridge::class,
-            GravityFormsComponentMutationResolverBridge::class
+            GravityFormsAddEntryToFormMutationResolverBridge::class
         );
     }
 }
