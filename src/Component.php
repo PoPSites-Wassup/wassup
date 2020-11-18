@@ -14,9 +14,9 @@ use PoP\ComponentModel\Container\ContainerBuilderUtils;
  */
 class Component extends AbstractComponent
 {
-    public static $COMPONENT_DIR;
-
     use YAMLServicesTrait;
+
+    public static $COMPONENT_DIR;
 
     /**
      * Classes from PoP components that must be initialized before this component
