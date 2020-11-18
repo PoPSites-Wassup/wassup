@@ -14,6 +14,8 @@ use PoP\ComponentModel\Container\ContainerBuilderUtils;
  */
 class Component extends AbstractComponent
 {
+    public static $COMPONENT_DIR;
+
     use YAMLServicesTrait;
 
     /**
@@ -88,6 +90,8 @@ class Component extends AbstractComponent
         array $skipSchemaComponentClasses = []
     ): void {
         parent::doInitialize($configuration, $skipSchema, $skipSchemaComponentClasses);
+        self::$COMPONENT_DIR = dirname(__DIR__);
+        self::initYAMLServices(self::$COMPONENT_DIR);
         ServiceConfiguration::initialize();
     }
 
