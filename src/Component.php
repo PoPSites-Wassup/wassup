@@ -60,6 +60,7 @@ class Component extends AbstractComponent
             \PoPSitesWassup\PostMutations\Component::class,
             \PoPSitesWassup\HighlightMutations\Component::class,
             \PoPSitesWassup\StanceMutations\Component::class,
+            \PoPSitesWassup\CommentMutations\Component::class,
         ];
     }
 
