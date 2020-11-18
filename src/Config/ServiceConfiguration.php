@@ -7,14 +7,15 @@ namespace PoPSitesWassup\Wassup\Config;
 use PoP\Root\Component\PHPServiceConfigurationTrait;
 use PoP\ComponentModel\Container\ContainerBuilderUtils;
 use PoP\ComponentModel\Instances\InstanceManagerInterface;
-use PoPSitesWassup\ContactUsMutations\MutationResolverBridges\ContactUsComponentMutationResolverBridge;
-use PoPSitesWassup\ContactUserMutations\MutationResolverBridges\ContactUserComponentMutationResolverBridge;
-use PoPSitesWassup\FlagMutations\MutationResolverBridges\FlagCustomPostComponentMutationResolverBridge;
 use PoPSitesWassup\ShareMutations\MutationResolverBridges\ShareComponentMutationResolverBridge;
+use PoPSitesWassup\ContactUsMutations\MutationResolverBridges\ContactUsComponentMutationResolverBridge;
+use PoPSitesWassup\FlagMutations\MutationResolverBridges\FlagCustomPostComponentMutationResolverBridge;
 use PoPSitesWassup\VolunteerMutations\MutationResolverBridges\VolunteerComponentMutationResolverBridge;
+use PoPSitesWassup\ContactUserMutations\MutationResolverBridges\ContactUserComponentMutationResolverBridge;
+use PoPSitesWassup\Wassup\MutationResolverBridges\GravityFormsNewsletterUnsubscriptionMutationResolverBridge;
+use PoPSitesWassup\GravityFormsMutations\MutationResolverBridges\GravityFormsAddEntryToFormMutationResolverBridge;
 use PoPSitesWassup\NewsletterMutations\MutationResolverBridges\NewsletterSubscriptionComponentMutationResolverBridge;
 use PoPSitesWassup\NewsletterMutations\MutationResolverBridges\NewsletterUnsubscriptionComponentMutationResolverBridge;
-use PoPSitesWassup\GravityFormsMutations\MutationResolverBridges\GravityFormsAddEntryToFormMutationResolverBridge;
 
 class ServiceConfiguration
 {
@@ -74,8 +75,8 @@ class ServiceConfiguration
         ContainerBuilderUtils::injectValuesIntoService(
             InstanceManagerInterface::class,
             'overrideClass',
-            \GD_GF_DataLoad_ActionExecuter_NewsletterUnsubscription::class, //NewsletterUnsubscriptionComponentMutationResolverBridge::class,
-            GravityFormsAddEntryToFormMutationResolverBridge::class
+            NewsletterUnsubscriptionComponentMutationResolverBridge::class,
+            GravityFormsNewsletterUnsubscriptionMutationResolverBridge::class
         );
     }
 }
