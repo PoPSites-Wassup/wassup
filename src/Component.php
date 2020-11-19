@@ -81,6 +81,7 @@ class Component extends AbstractComponent
             \PoPSitesWassup\PostLinkMutations\Component::class,
             \PoPSitesWassup\EventLinkMutations\Component::class,
             \PoPSitesWassup\LocationPostLinkMutations\Component::class,
+            \PoPSitesWassup\NotificationMutations\Component::class,
         ];
     }
 
