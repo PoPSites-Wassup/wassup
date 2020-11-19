@@ -47,6 +47,7 @@
         "pop-schema/post-mutations": "dev-master",
         "pop-schema/custompostmedia-mutations-wp": "dev-master",
         "pop-schema/comment-mutations-wp": "dev-master",
+        "pop-schema/user-state-mutations-wp": "dev-master",
 
         "pop-schema/categories-wp": "dev-master",
         "pop-schema/notifications-wp": "dev-master",
