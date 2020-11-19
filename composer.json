@@ -76,7 +76,8 @@
         "pop-sites-wassup/eventlink-mutations": "dev-master",
         "pop-sites-wassup/locationpostlink-mutations": "dev-master",
         "pop-sites-wassup/notification-mutations": "dev-master",
-        "pop-sites-wassup/socialnetwork-mutations": "dev-master"
+        "pop-sites-wassup/socialnetwork-mutations": "dev-master",
+        "pop-sites-wassup/everythingelse-mutations": "dev-master"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
